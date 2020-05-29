@@ -9,3 +9,5 @@
       tags:
          testing: testing
           delete: never
+  - name: Get facts for all resource groups
+  azure_rm_resourcegroup_info:
