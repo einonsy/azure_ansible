@@ -2,10 +2,10 @@
 - hosts: localhost
   connection: local
   tasks:
-    - name: Create resource group
-      azure_rm_resourcegroup:
-        name: rg-cs-ansible
-        location: eastus
-      register: rg
-    - debug:
-        var: rg
+  - name: Create a resource group
+    azure_rm_resourcegroup:
+      name: bot-group-01
+      location: southuk
+      tags:
+         testing: testing
+          delete: never
