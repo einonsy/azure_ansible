@@ -2,6 +2,7 @@
 - hosts: localhost
   connection: local
   tasks:
+
   - name: Create a resource group
     azure_rm_resourcegroup:
       name: bot-group-01
@@ -9,5 +10,10 @@
       tags:
          testing: testing
           delete: never
+
   - name: Get facts for all resource groups
-  azure_rm_resourcegroup_info:
+    azure_rm_resourcegroup_info:
+
+  - name: create bot 
+    shell: |
+      az bot prepare-deploy --lang Javascript --code-dir "MyBotCode"
